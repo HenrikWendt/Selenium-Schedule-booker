@@ -2,7 +2,7 @@ import time
 from selenium import webdriver
 
 options = webdriver.ChromeOptions()
-driver = webdriver.Chrome('D:\Progg\Selenium-bot\chromedriver', options=options)
+driver = webdriver.Chrome('D:\Progg\Selenium-bot\Basic-Selenium-Bot\chromedriver', options=options)
 driver.maximize_window()
 driver.get('https://serhiipuzyrov.com/contact');
 time.sleep(3)
