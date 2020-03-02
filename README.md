@@ -1,3 +1,3 @@
 # Basic-Selenium-Bot
-A Selenium bot built to booking locations. 
-Testing a commit. 
+A Selenium bot built to book rooms at campus. 
+ 
