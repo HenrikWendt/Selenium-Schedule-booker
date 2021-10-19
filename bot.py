@@ -144,6 +144,8 @@ except:
             time.sleep(2)
             driver.find_elements_by_xpath(datum)[0].click()
         except:
+            #Retries with longer waiting
+            driver.find_elements_by_xpath('//*[@id="leftresdatedec"]')[0].click()
             if dateShifterHelper(datum,True):
                 driver.find_elements_by_xpath(datum)[0].click()
             else:
