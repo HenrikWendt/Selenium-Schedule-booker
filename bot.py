@@ -24,10 +24,10 @@ date = datetime.today() + timedelta(days=2)
  
 sal ="SH408"
 datum2 = str(date.day)+"/"+str(date.month)  # (OBS bara dag och månad ex 1/3)
-starttid ="17:15" #(OBS måste sluta på 15 ex 13:15)
-sluttid ="19:00" #(OBS måste sluta på 00 ex 18:00, man kan max boka 4 timmar)
-user =""
-password =""
+starttid ="09:15" #(OBS måste sluta på 15 ex 13:15)
+sluttid ="13:00" #(OBS måste sluta på 00 ex 18:00, man kan max boka 4 timmar)
+user ="henwe331"
+password ="Malmoff1910"
 
 print()
 print()
@@ -133,7 +133,12 @@ driver.find_elements_by_xpath("//*[contains(text(), 'Studentbokning LiU')]")[0].
 waitForPageToLoad('//*[@data-param="search_text"]',True)
 driver.find_elements_by_xpath('//*[@data-param="search_text"]')[0].send_keys(sal)
 
-time.sleep(2)
+salKey1 = "//*[contains(text(), '"
+salKey3 = "')]"
+salKey = salKey1 + sal + " (" + salKey3
+
+
+waitForPageToLoad(salKey,True)
 try:
     driver.find_elements_by_xpath(datum)[0].click()
     
